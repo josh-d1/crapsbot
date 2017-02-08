@@ -1,0 +1,34 @@
+:host {
+  flex: .4;
+}
+
+chip {
+  position: absolute;
+}
+
+#oddsdiv {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+
+  margin-left: 3em;
+
+  z-index: 2;
+}
+
+#oddsdiv #bridge {
+  transform: rotate(30deg);
+  margin-left: .5em;
+}
+
+#oddsdiv #bridge.heel {
+  transform: scale(.9);
+}
+
+#oddsdiv #odds {
+  margin-left: -.5em;
+}
+
+#oddsdiv #odds.heel {
+  margin-left: 1.25em;
+}

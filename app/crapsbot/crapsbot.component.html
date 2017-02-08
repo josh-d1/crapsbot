@@ -1,0 +1,96 @@
+<div class="braindump">
+  <button class="btn btn-roll record"
+          (click)="brain.recording = !brain.recording"
+  >
+    <i class="material-icons md-48">
+      {{ brain.recording ? 'track_changes' : 'fiber_manual_record' }}
+    </i>
+  </button>
+  <div id="pointoff">
+    <span *ngFor="let bet of brain.wagers.pointoff"
+          (click)="brain.removeWager(wagertypes.pointoff, $index)"
+    >
+      <strong>{{ bet.label }}</strong>
+      <p>{{ bet.val }}</p>
+    </span>
+  </div>
+
+  <div id="pointon">
+  <span *ngFor="let bet of brain.wagers.pointon"
+        (click)="brain.removeWager(wagertypes.pointon, $index)"
+  >
+    <strong>{{ bet.label }}</strong>
+    <p [class.nodds]="bet.label === 'nodds'">{{bet.val }}</p>
+  </span>
+  </div>
+
+  <div id="singleroll">
+  <span *ngFor="let bet of brain.wagers.singleroll"
+        (click)="brain.removeWager(wagertypes.singleroll, $index)"
+  >
+    <strong>{{ bet.label }}</strong>
+    <p>{{ bet.val }}</p>
+  </span>
+  </div>
+
+  <div id="come">
+  <span *ngFor="let bet of brain.wagers.come"
+        (click)="brain.removeWager(wagertypes.come, $index)"
+  >
+    <strong>{{ bet.label }}</strong>
+    <p>{{ bet.val }}</p>
+  </span>
+  </div>
+</div>
+
+
+<div id="controls">
+  <!--<div id="message">-->
+    <!--<p>-->
+      <!--{{ message | async }}-->
+    <!--</p>-->
+  <!--</div>-->
+  <div class="dice">
+
+    <button class="btn btn-roll"
+            [class.inverted]="stickman.magic === true"
+            (click)="loadDice()"
+    >
+      <i class="material-icons">
+        adb
+      </i>
+    </button>
+    <button class="btn btn-roll"
+            [class.inverted]="timer !== null"
+            (click)="pause()"
+    >
+      <i class="material-icons">
+        {{ timer === null ? 'play_arrow' : 'pause' }}
+      </i>
+    </button>
+
+    <div class="shim"></div>
+    <div class="die"
+         (click)="rollDice()"
+         [@rolling]="rolling"
+    >
+      {{ (dice && glyphs[dice.die1 - 1]) || glyphs[0] }}
+    </div>
+    <div class="shim"></div>
+    <div class="die"
+         (click)="rollDice()"
+         [@rolling]="rolling"
+    >
+      {{ (dice && glyphs[dice.die2 - 1]) || glyphs[4] }}
+    </div>
+    <div class="shim"></div>
+    <span>
+      <strong>rolls</strong>
+      {{ dicerolls }}
+    </span>
+  </div>
+  <div id="winnings">
+    {{ boxman.total | currency:'USD':true:'1.0-2' }}
+  </div>
+
+</div>

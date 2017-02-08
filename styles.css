@@ -1,0 +1,61 @@
+:root {
+  --transform: translate(10vw, 35vh) rotate(-20deg);
+  --green: rgba(0, 255, 0, .6);
+  --black: rgba(0, 0, 0, .5);
+  --red: rgba(255, 0, 0, .6);
+}
+
+
+body {
+  background-color: #093;
+  overflow: hidden;
+}
+
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+
+craps > div.overflow-container {
+  overflow: hidden;
+}
+
+craps  > div.overflow-container > div#banner {
+  position: absolute;
+
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 10em;
+  color: rgba(255, 255, 255, .8);
+  text-transform: uppercase;
+  transform: var(--transform);
+
+  will-change: transform;
+}
+
+craps > div.overflow-container > div#banner::before {
+  content: 'crapsbot!'
+}
+
+.loading {
+  animation-name: pageload;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pageload {
+  0% {
+    transform: var(--transform) skewX(40deg);
+  }
+
+  50% {
+    transform: var(--transform) skewX(-60deg) scale(1.6);
+  }
+
+  100% {
+    transform: var(--transform) skewX(40deg) scale(1);
+  }
+
+}

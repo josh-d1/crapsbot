@@ -1,0 +1,77 @@
+:host {
+  position: absolute;
+
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 3em;
+  min-height: 3em;
+
+  color: rgba(0, 0, 0, .6);
+
+  background-color: yellow;
+  border-style: dashed;
+  border-color: red;
+  border-width: 6px;
+  border-radius: 50%;
+
+  box-shadow: 2px 1px 2px 1px rgba(0, 0, 0, .2);
+
+  cursor: pointer;
+  overflow: visible;
+}
+
+:host.one {
+  background-color: white;
+  border-color: orange;
+}
+
+:host.five {
+  border-color: navy;
+  background-color: aqua;
+}
+
+:host.twentyfive {
+  border-color: #555;
+  background-color: black;
+}
+
+#value {
+  display: flex;
+  min-width: 2em;
+  min-height: 2em;
+  justify-content: center;
+  align-items: center;
+
+  border-style: double;
+  border-color: rgba(0, 0, 0, .15);
+  border-width: 5px;
+  border-radius: 50%;
+
+  /*font-family: Ultra, sans-serif;*/
+  /*font-family: Cinzel Decorative, sans-serif;*/
+  font-size: 1.6em;
+  font-weight: 700;
+  background-color: #fff;
+}
+
+#value::before {
+  content: '$';
+}
+
+:host.one #value::before {
+  content: '1';
+}
+
+:host.five #value::before {
+  content: '5';
+}
+
+:host.twentyfive #value::before {
+  content: '25';
+}
+
+
+/*@import 'chip.component.css';*/

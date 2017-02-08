@@ -1,0 +1,81 @@
+:host {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:host::before {
+  color: rgba(255, 255, 255, .8);
+  font-size: 2.4em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+:host::before {
+  /*position: absolute;*/
+}
+
+:host.four::before {
+  content: '4';
+}
+
+:host.five::before {
+  content: '5';
+}
+
+:host.six::before {
+  content: 'six';
+  font-style: italic;
+  letter-spacing: 5px;
+  transform: rotate(-20deg);
+}
+
+:host.eight::before {
+  content: '8';
+}
+
+:host.nine::before {
+  content: 'nine';
+  font-style: italic;
+  letter-spacing: 5px;
+  transform: rotate(-20deg);
+}
+
+:host.ten::before {
+  content: '10';
+}
+
+chip {
+  position: absolute;
+}
+
+:host div {
+  position: relative;
+  left: -3vw;
+  top: -3vh;
+}
+
+:host.six,:host.nine div {
+  left: -7vw;
+}
+
+#bet {
+  left: -2vw;
+  top: 4vh;
+}
+
+#odds {
+  top: 2vh;
+  left: 2vw;
+}
+
+#winbet {
+  top: -2vh;
+  left: -2vw;
+}
+
+#oddswin {
+  top: -4vw;
+  left: 2vw;
+}

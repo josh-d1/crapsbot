@@ -1,0 +1,16 @@
+:host {
+  flex: .25;
+  display: flex;
+  min-height: 7vh;
+
+  border-color: rgba(255, 255, 255, .8);
+  border-width: 0;
+  border-top-width: 2px;
+  border-style: solid;
+}
+
+:host > div {
+  flex: 1;
+  display: flex;
+
+}

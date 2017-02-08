@@ -1,0 +1,15 @@
+<chip id="bet"
+      [val]="bet.total"
+      [hidden]="bet.total === 0 && !chipanime.state"
+      (click)="nuke()"
+      [@chips]="chipanime.state"
+      (@chips.start)="chipanime.start($event)"
+      (@chips.done)="chipanime.reset($event)"
+></chip>
+<chip id="winbet"
+      type="win"
+      [val]="winanime.val"
+      [@chips]="winanime.state"
+      (@chips.start)="winanime.start($event)"
+      (@chips.done)="winanime.reset($event)"
+></chip>

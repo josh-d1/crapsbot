@@ -1,0 +1,66 @@
+@import '../shared/flex.css';
+
+:host {
+  font-family: Lato, sans-serif;
+  min-height: 50vh;
+  background-color: #093;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /*padding: 10px;*/
+}
+
+.center-numbers {
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+}
+
+div#passline-odds::after {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  /*min-height: 7vw;*/
+
+  content: '10x odds';
+  font-size: 1.6em;
+  text-transform: uppercase;
+  letter-spacing: .5vw;
+  color: rgba(255, 255, 255, .8);
+
+  padding: 20px;
+}
+
+.nopass {
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, .8);
+  border-style: solid;
+  min-height: 7vh;
+}
+
+.nopass::before {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .9);
+  content: "don't pass";
+  /*align-self: flex-end;*/
+  /*float: right;*/
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
+.nopass::after {
+  font-size: 1.4em;
+  font-weight: 400;
+  color: rgba(255, 255, 255, .9);
+  content: "\2685 \2685";
+  /*align-self: flex-end;*/
+  /*float: right;*/
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
+

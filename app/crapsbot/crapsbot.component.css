@@ -1,0 +1,180 @@
+:host {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  min-height: 10vh;
+
+  font-family: Quicksand, sans-serif;
+
+  color: var(--green);
+  background-color: var(--black);
+
+  padding: .5vh .5vw;
+}
+
+.btn-roll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-width: 0;
+  border-radius: 50%;
+
+  min-width: 2.5em;
+  min-height: 2.5em;
+  max-height: 2.5em;
+
+  padding: 0;
+
+  color: var(--green);
+  background-color: inherit;
+}
+
+.btn-roll.inverted {
+  color: var(--black);
+  background-color: var(--green);
+}
+
+.btn-roll.record {
+  font-size: inherit;
+}
+
+.btn-roll::before {
+  font-size: 2.4em;
+}
+
+.braindump {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+#pointoff,#pointon,#singleroll,#come {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  text-transform: lowercase;
+}
+
+#pointoff::before,#pointon::before,#singleroll::before,#come::before {
+  width: 2vw;
+
+  font-weight: 700;
+  font-size: .9em;
+
+  writing-mode: vertical-lr;
+
+  max-height: 3em;
+
+  border-left-width: 2px;
+  border-left-style: solid;
+
+  transform: rotate(-180deg);
+}
+
+#pointoff::before {
+  content: 'off';
+}
+
+#pointon::before {
+  content: 'on';
+}
+
+#singleroll::before {
+  content: 'single';
+}
+
+#come::before {
+  content: 'come';
+}
+
+#pointoff span:first-child,#pointon span:first-child,#singleroll span:first-child,#come span:first-child{
+  margin-left: 10px;
+}
+
+span {
+  flex: 0;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1vw;
+
+  cursor: not-allowed;
+}
+
+span p {
+  margin: 0;
+}
+
+span p.nodds::after {
+  content: 'x';
+}
+
+#controls {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 5px;
+}
+
+#controls #message {
+  font-size: .8em;
+}
+
+#controls .dice {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  /*cursor: pointer;*/
+  /*margin: 1vh 1vw;*/
+}
+
+#controls .dice .die {
+  transform: scale(3);
+  will-change: transform;
+  z-index: 20;
+  cursor: pointer;
+}
+
+#controls .dice .shim {
+  padding: 0 1em;
+}
+
+#counter {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+}
+
+#winnings {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  font-size: 1.6em;
+}
+
+#stats {
+  flex: 1;
+  display: flex;
+}
+
+#stats span {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#stats span p {
+  flex: .33 .33 0;
+  display: flex;
+  justify-content: flex-start;
+
+  margin: 0;
+}

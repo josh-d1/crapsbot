@@ -1,0 +1,46 @@
+<ul>
+  <li id="2"
+      [class.hot]="zones[2]"
+  >
+  </li>
+  <li id="3"
+      [class.hot]="zones[3]"
+  >
+  </li>
+  <li id="4"
+      [class.hot]="zones[4]"
+  >
+  </li>
+  <li id="9"
+      [class.hot]="zones[9]"
+  >
+  </li>
+  <li id="10"
+      [class.hot]="zones[10]"
+  >
+  </li>
+  <li id="11"
+      [class.hot]="zones[11]"
+  ></li>
+  <li id="12"
+      [class.hot]="zones[12]"
+  ></li>
+</ul>
+
+<div>
+  <chip [val]="bet.total"
+        [hidden]="bet.total === 0"
+        (click)="nuke()"
+        [@chips]="chipanime.state"
+        (@chips.start)="chipanime.start($event)"
+        (@chips.done)="chipanime.reset($event)"
+  ></chip>
+  <chip id="winbet"
+        type="win"
+        [val]="winanime.val"
+        [@chips]="winanime.state"
+        (@chips.start)="winanime.start($event)"
+        (@chips.done)="winanime.reset($event)"
+  ></chip>
+</div>
+

@@ -1,0 +1,48 @@
+:host{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+
+  min-width: 3em;
+  min-height: 3em;
+
+  font-weight: 700;
+  font-size: 2em;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  border-width: 4px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 50%;
+
+  box-shadow: 4px 2px 3px 2px rgba(0, 0, 0, .2);
+}
+
+:host.active {
+  color: rgba(0, 0, 0, .8);
+  background-color: white;
+  border-color: rgba(0, 0, 0, .8);
+  z-index: 1;
+}
+
+
+:host.active::after {
+  content: 'on';
+}
+
+:host.inactive {
+  background-color: black;
+  color: rgba(255, 255, 255, .8);
+  border-color: rgba(255, 255, 255, .8);
+}
+
+:host.inactive::after {
+  content: 'off';
+}

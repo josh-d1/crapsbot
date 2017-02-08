@@ -1,0 +1,32 @@
+<chip id="bet"
+      [val]="bet.total"
+      [hidden]="bet.total === 0 && !chipanime.state"
+      (click)="nuke()"
+      [@chips]="chipanime.state"
+      (@chips.start)="chipanime.start($event)"
+      (@chips.done)="chipanime.reset($event)"
+></chip>
+
+<chip id="winbet"
+      type="win"
+      [val]="winanime.val"
+      [@chips]="winanime.state"
+      (@chips.start)="winanime.start($event)"
+      (@chips.done)="winanime.reset($event)"
+></chip>
+
+<chip id="odds"
+      type="odds"
+      [val]="bet.odds"
+      [hidden]="bet.odds === 0 && !oddsanime.state"
+      [@chips]="oddsanime.state"
+      (@chips.start)="oddsanime.start($event)"
+      (@chips.done)="oddsanime.reset($event)"
+></chip>
+<chip id="oddswin"
+      type="win"
+      [val]="oddswinanime.val"
+      [@chips]="oddswinanime.state"
+      (@chips.start)="oddswinanime.start($event)"
+      (@chips.done)="oddswinanime.reset($event)"
+></chip>

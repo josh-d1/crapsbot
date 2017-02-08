@@ -1,0 +1,150 @@
+:host {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/*table-button {*/
+  /*margin-left: 40%;*/
+/*}*/
+
+ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+ul li {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  border-color: rgba(255, 255, 255, .8);
+  border-width: 2px;
+  border-style: solid;
+}
+
+ul li.point::after {
+  content: 'on';
+  color: rgba(0, 0, 0, .8);
+  background-color: rgba(255, 255, 255, .8);
+
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, .8);
+  border-radius: 50%;
+
+  position: absolute;
+  min-width: 10vw;
+  min-height: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.8em;
+  align-self: center;
+  top: 60px;
+}
+
+ul li ~ li {
+  border-left-width: 0;
+}
+
+ul li:before {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, .8);
+  font-size: 2.4em;
+  font-weight: 700;
+}
+
+ul li table-laybox {
+  /*min-height: 9vh;*/
+  /*min-width: 100%;*/
+
+  border-color: rgba(255, 255, 255, .8);
+  border-width: 0;
+  border-bottom-width: 7px;
+  border-style: double;
+}
+
+ul li span:before {
+  color: rgba(255, 255, 255, .8);
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+ul li div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 16vh;
+}
+
+ul li div:before {
+  color: rgba(255, 255, 255, .8);
+  font-size: 2.4em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+ul li footer {
+  min-height: 5vh;
+  min-width: 100%;
+
+  border-color: rgba(255, 255, 255, .8);
+  border-width: 0;
+  border-top-width: 2px;
+  border-style: solid;
+}
+
+
+ul li#four > div:before {
+  content: '4';
+}
+
+ul li#five > div:before {
+  content: '5';
+}
+
+ul li#six div {
+  transform: rotate(-20deg);
+}
+
+ul li#six div:before {
+  content: 'six';
+  font-style: italic;
+  letter-spacing: 5px;
+}
+
+ul li#eight div:before {
+  content: '8';
+}
+
+ul li#nine:before {
+  content: '';
+  flex: 0;
+}
+
+ul li#nine div {
+  transform: rotate(-20deg);
+}
+
+ul li#nine div:before {
+  content: 'nine';
+  font-style: italic;
+  letter-spacing: 5px;
+}
+
+ul li#ten div:before {
+  content: '10';
+}
+

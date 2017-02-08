@@ -1,0 +1,43 @@
+:host {
+  flex: .5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-width: 2px 2px 0 0;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, .8);
+}
+
+
+:host::before {
+  content: 'come';
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  text-transform: uppercase;
+  letter-spacing: 2vh;
+
+  color: rgba(255, 255, 255, .8);
+
+  font-weight: 700;
+  font-size: 2em;
+
+  width: 1.5em;
+}
+
+chip {
+  position: absolute;
+}
+
+#bet {
+  top: 33vh;
+  left: 92vw;
+}
+
+#winbet {
+  top: 35vh;
+  left: 87vw;
+  /*top: -20vh;*/
+  /*left: -4em;*/
+}

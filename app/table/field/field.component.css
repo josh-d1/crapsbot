@@ -1,0 +1,135 @@
+:host {
+  flex: .25;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  color: rgba(255, 255, 0, .8);
+
+  border-width: 0 2px 2px 2px;
+  border-style: solid;
+  border-color: rgba(255, 255, 0, .8);
+  border-bottom-left-radius: 3vw;
+  border-bottom-right-radius: 3vw;
+  padding: 1vh 2vw;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  min-height: 2em;
+  max-height: 2em;
+
+  font-size: 1.7em;
+
+  pointer-events: none;
+}
+
+ul li {
+  display: flex;
+  flex: 1;
+}
+
+ul li.hot::before {
+  background-color: rgba(69,162,242,.8);
+  color: rgba(255, 255, 255, .8);
+  border-color: transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50%;
+}
+
+ul li::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 2em;
+  max-width: 2em;
+}
+
+ul li:not(:last-child)::after {
+  /*content: '\2022';*/
+  content: ' ';
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li:last-child {
+  flex: 0;
+}
+
+
+ul li:nth-child(1)::before{
+  content: '2';
+  border-color: rgba(255, 255, 0, .8);
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50%;
+
+  transform: scale(1.15) translateY(1vh);
+}
+
+ul li:nth-child(2)::before{
+  content: '3';
+}
+
+ul li:nth-child(3)::before{
+  content: '4';
+}
+
+ul li:nth-child(4)::before{
+  content: '9';
+}
+
+ul li:nth-child(5)::before{
+  content: '10';
+}
+
+ul li:nth-child(6)::before{
+  content: '11';
+}
+
+/*ul li:nth-child(6)::after {
+  transform: translateY(1vh);
+}*/
+
+ul li:nth-child(7)::before{
+  content: '12';
+  border-color: rgba(255, 255, 0, .8);
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50%;
+  transform: scale(1.15) translateY(1vh);
+}
+
+:host > div {
+  flex: 1;
+  display: flex;
+
+  pointer-events: none;
+  justify-content: center;
+}
+
+:host > div chip {
+  position: absolute;
+  margin-top: -3em;
+  left: 40%;
+}
+
+:host > div::before {
+  content: 'field';
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.8em;
+  letter-spacing: 1vw;
+
+  /*display: flex;*/
+  /*align-self: center;*/
+  /*justify-content: center;*/
+
+  /*position: absolute;*/
+}
