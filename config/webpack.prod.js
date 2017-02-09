@@ -11,7 +11,7 @@ module.exports = webpackMerge(commonConfig, {
 
   output: {
     path: helpers.root('.'),
-    publicPath: '/',
+    publicPath: '/crapsbot',
     filename: '[name].[hash].js',
     chunkFilename: '[id].[hash].chunk.js'
   },
