@@ -19,8 +19,8 @@ import {dice_glyphs} from '../shared/dice-glyphs';
 
 @Component({
              selector: 'crapsbot',
-             templateUrl: 'app/crapsbot/crapsbot.component.html',
-             styleUrls: ['app/crapsbot/crapsbot.component.css'],
+             templateUrl: './crapsbot.component.html',
+             styleUrls: ['./crapsbot.component.css'],
              animations: [rolling],
              // changeDetection: ChangeDetectionStrategy.OnPush,
            })

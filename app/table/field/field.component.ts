@@ -22,8 +22,9 @@ class FieldBet extends Wager {}
 
 @Component({
              selector: 'table-field',
-             templateUrl: 'app/table/field/field.component.html',
-             styleUrls: ['app/table/field/field.component.css', 'app/table/hotzone.css'],
+             templateUrl: './field.component.html',
+             styleUrls: ['./field.component.css',
+                         '../hotzone.css'],
              animations: [chips],
            })
 export class FieldComponent extends BettingArea {

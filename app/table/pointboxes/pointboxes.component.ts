@@ -5,8 +5,8 @@ import {pointbuttonslider} from '../../animation/pointbutton-slider.animation';
 
 @Component({
              selector: 'table-pointboxes',
-             templateUrl: 'app/table/pointboxes/pointboxes.component.html',
-             styleUrls: ['app/table/pointboxes/pointboxes.component.css'],
+             templateUrl: './pointboxes.component.html',
+             styleUrls: ['./pointboxes.component.css'],
              animations: [hotzone, pointbuttonslider],
            })
 export class PointboxesComponent {

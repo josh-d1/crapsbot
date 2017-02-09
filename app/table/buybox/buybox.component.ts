@@ -16,9 +16,9 @@ class BuyBet extends Wager {}
 
 @Component({
              selector: 'table-buybox',
-             templateUrl: 'app/table/buybox/buybox.component.html',
-             styleUrls: ['app/table/buybox/buybox.component.css',
-                         'app/table/hotzone.css'],
+             templateUrl: './buybox.component.html',
+             styleUrls: ['./buybox.component.css',
+                         '../hotzone.css'],
              animations: [chips],
              host: {
                '[class.four]': "box === '4'",

@@ -16,9 +16,9 @@ class LayBet extends Wager {}
 
 @Component({
              selector: 'table-laybox',
-             templateUrl: 'app/table/laybox/laybox.component.html',
-             styleUrls: ['app/table/laybox/laybox.component.css',
-                         'app/table/hotzone.css'],
+             templateUrl: './laybox.component.html',
+             styleUrls: ['./laybox.component.css',
+                         '../hotzone.css'],
              animations: [chips],
              host: {
                '[class.inactive]': "rollhit === 'inactive'",

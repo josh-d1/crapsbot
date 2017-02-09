@@ -1,5 +1,3 @@
-@import '../shared/flex.css';
-
 :host {
   font-family: Lato, sans-serif;
   min-height: 50vh;

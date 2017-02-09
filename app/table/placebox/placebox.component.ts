@@ -17,8 +17,9 @@ class PlaceBet extends Wager {}
 
 @Component({
              selector: 'table-placebox',
-             templateUrl: 'app/table/placebox/placebox.component.html',
-             styleUrls: ['app/table/placebox/placebox.component.css','app/table/hotzone.css'],
+             templateUrl: './placebox.component.html',
+             styleUrls: ['./placebox.component.css',
+                         '../hotzone.css'],
              animations: [chips],
              host: {
                '[class.inactive]': "rollhit === 'inactive'",

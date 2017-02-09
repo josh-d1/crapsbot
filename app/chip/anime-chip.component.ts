@@ -1,22 +1,17 @@
 import {
   Component,
-  ElementRef,
-  EventEmitter,
-  Input,
   HostBinding,
   HostListener,
   ComponentRef,
 } from '@angular/core';
 
-import {ChipComponent} from './chip.component';
 import {chips} from '../animation/chips.animation';
-import {blankpng} from '../shared/blankpng';
 
 
 @Component({
              selector: 'anime-chip',
-             templateUrl: '/app/chip/anime-chip.component.html',
-             styleUrls: ['app/chip/chip.component.css'],
+             templateUrl: './anime-chip.component.html',
+             styleUrls: ['./chip.component.css'],
              animations: [chips],
            })
 export class AnimeChipComponent {

@@ -13,9 +13,9 @@ class ComeBet extends Wager {}
 
 @Component({
              selector: 'table-come',
-             templateUrl: 'app/table/come/come.component.html',
-             styleUrls: ['app/table/come/come.component.css',
-                         'app/table/hotzone.css'],
+             templateUrl: './come.component.html',
+             styleUrls: ['./come.component.css',
+                         '../hotzone.css'],
              animations: [chips],
            })
 export class ComeComponent extends BettingArea {

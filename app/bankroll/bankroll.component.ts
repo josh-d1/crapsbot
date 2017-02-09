@@ -8,7 +8,6 @@ import {
 } from '@angular/core';
 
 import {AnimeChipComponent} from '../chip/anime-chip.component';
-import {CrapsBets} from '../shared/crapsbets.model';
 import {Stickman} from '../shared/stickman.service';
 import {Boxman} from '../shared/boxman.service';
 
@@ -17,8 +16,8 @@ import {chips} from '../animation/chips.animation';
 
 @Component({
              selector: 'bankroll',
-             templateUrl: '/app/bankroll/bankroll.component.html',
-             styleUrls: ['app/bankroll/bankroll.component.css'],
+             templateUrl: './bankroll.component.html',
+             styleUrls: ['./bankroll.component.css'],
              animations: [chips],
            })
 export class BankrollComponent {

@@ -3,12 +3,10 @@ import {
   Input,
 } from '@angular/core';
 
-import {blankpng} from '../shared/blankpng';
-
 @Component({
              selector: 'chip',
-             templateUrl: '/app/chip/chip.component.html',
-             styleUrls: ['app/chip/chip.component.css'],
+             templateUrl: './chip.component.html',
+             styleUrls: ['./chip.component.css'],
              host: {
                '[class.one]': "val === '1'",
                '[class.five]': "val === '5'",

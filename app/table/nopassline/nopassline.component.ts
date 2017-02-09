@@ -21,9 +21,9 @@ class NopasslineBet extends Wager {}
 
 @Component({
              selector: 'table-nopassline',
-             templateUrl: 'app/table/nopassline/nopassline.component.html',
-             styleUrls: ['app/table/nopassline/nopassline.component.css',
-                         'app/table/hotzone.css'],
+             templateUrl: './nopassline.component.html',
+             styleUrls: ['./nopassline.component.css',
+                         '../hotzone.css'],
              animations: [chips]
            })
 export class NopasslineComponent extends BettingArea {

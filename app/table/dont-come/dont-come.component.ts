@@ -11,8 +11,8 @@ class DontcomeBet extends Wager {}
 
 @Component({
              selector: 'table-dont-come',
-             templateUrl: 'app/table/dont-come/dont-come.component.html',
-             styleUrls: ['app/table/dont-come/dont-come.component.css'],
+             templateUrl: './dont-come.component.html',
+             styleUrls: ['./dont-come.component.css'],
              animations: [chips],
            })
 export class DontcomeComponent extends BettingArea {

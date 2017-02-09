@@ -15,9 +15,9 @@ class PasslineBet extends Wager {}
 
 @Component({
              selector: 'table-passline',
-             templateUrl: 'app/table/passline/passline.component.html',
-             styleUrls: ['app/table/passline/passline.component.css',
-                         'app/table/hotzone.css'],
+             templateUrl: './passline.component.html',
+             styleUrls: ['./passline.component.css',
+                         '../hotzone.css'],
              animations: [chips],
              host: {
                '[class.inactive]': "rollhit === 'inactive'",
